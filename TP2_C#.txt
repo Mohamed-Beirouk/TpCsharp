@@ -1,0 +1,158 @@
+Exercice 1:
+
+1)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace TPoop
+{
+    public class Voiture
+    {
+        private string modele;
+        private string couleur;
+        private int prix;
+        private int puissance;
+        public Voiture()
+        {
+        }
+        public Voiture(string modele)
+        {
+            this.modele = modele;
+        }
+        public string GetCouleur()
+        {
+            return this.couleur;
+        }
+        public int GetPrix()
+        {
+            return this.prix;
+        }
+    }
+}
+
+2)
+Non, on peut pas l'executer, car il ne contient pas la methode Main (La méthode Main est le point d'entrée de chaque application C#)
+
+
+3)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPoop
+{
+    public class TestVoiture
+    {
+
+        static void Main(string[] args)
+        {
+            Voiture v1 = new Voiture();
+
+        }
+
+    }
+}
+
+
+4)
+public Voiture(int prix, string couleur)
+        {
+            this.prix = prix;
+            this.couleur = couleur;
+        }
+
+
+
+5)
+Voiture v2 = new Voiture(40000,"Noir");
+
+6)
+/* nous n'avons pas un attribut marque dans l'ennoncé du TP, c'est seulement l'attribut modele, donc je vais l'ajouté*/
+public string GetMarque()
+        {
+            return this.marque;
+        }
+
+
+v2.GetMarque();
+
+7)
+essai: System.Console.Write(v1.puissance);
+
+msg d'eurreur: "readonly struct"  :est inaccesible en raison de son niveau de protection.
+car c'est le principe d'encapsulation, l'attribut est privé, et par suite l'accées n'est pas autorisés que dans la classe elle meme par l'une de ces méthodes, 
+si on veut utilisé ou modifiés l'un de ces attributs nous somme obligés a utilisé les getters et les setters.
+
+8)
+public void SetMarque(string marque)
+        {
+            this.marque= marque;
+        }
+        public void SetCouleur(string couleur)
+        {
+            this.couleur = couleur;
+        }
+
+9)
+public override string ToString()
+        {
+            return "" + this.modele + "," + this.couleur + "," + this.prix + "," + this.puissance + ",";
+        }
+
+10)
+Console.WriteLine(v2);   
+
+
+11)
+ public Boolean Equals(Voiture v)
+        {
+            return (
+            (this.modele == v.modele) &&
+            (this.couleur == v.couleur) &&
+            (this.prix == v.prix) &&
+            (this.puissance == v.puissance) 
+            );
+        }
+
+
+12)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPoop
+{
+    public class VoitureEnSolde : Voiture
+    {
+        private double remise=0.2; // car il y'a une virgule.
+
+    }
+}
+
+
+13) on doit modifier getPrix() dans la classe voiture car elle sera  surchargeable dans la classe VoitureEnSolde, et par suite GetPrix dans la classe VoitureEnSolde elle va 
+écrasé la methode herité de la classe voiture.
+
+dans la classe : voiture :
+public virtual int GetPrix()
+        {
+            return this.prix;
+        }
+
+dans la classe VoitureEnSolde:
+ public override int GetPrix()
+        {
+
+           return (int)(base.GetPrix() - base.GetPrix() * this.remise);
+
+        }
+
+
+Exercice2:
+
