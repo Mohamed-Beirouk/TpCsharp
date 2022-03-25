@@ -1,0 +1,15 @@
+C:\Users\Dell\source\repos\TPoop\bin\Debug\net6.0\TPoop.exe
+C:\Users\Dell\source\repos\TPoop\bin\Debug\net6.0\TPoop.deps.json
+C:\Users\Dell\source\repos\TPoop\bin\Debug\net6.0\TPoop.runtimeconfig.json
+C:\Users\Dell\source\repos\TPoop\bin\Debug\net6.0\TPoop.dll
+C:\Users\Dell\source\repos\TPoop\bin\Debug\net6.0\TPoop.pdb
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.AssemblyInfo.cs
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.dll
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\refint\TPoop.dll
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.pdb
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\TPoop.genruntimeconfig.cache
+C:\Users\Dell\source\repos\TPoop\obj\Debug\net6.0\ref\TPoop.dll
