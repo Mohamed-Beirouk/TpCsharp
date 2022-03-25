@@ -11,6 +11,7 @@ namespace TPoop
     public class Voiture
     {
         private string modele;
+        private string marque
         private string couleur;
         private int prix;
         private int puissance;
@@ -154,5 +155,152 @@ dans la classe VoitureEnSolde:
         }
 
 
+
+
+
+
 Exercice2:
+
+1)
+Question :  une classe, une classe statique et une classe abstraite?
+Reponce:
+une classe c# est une entité qui détermine les caracteristiques d’un objet exemple (machine, voiture ou person) et son contenu. 
+
+une classe statique c'est une classe comme tous les classes sauf qu'elle est non instancier, elle determine un seul objet connus, l'acces sur ce classe
+c'est juste son nom suivie d'un point suivie du nom du methode ou attribut.
+
+Finalement, une classe abstraite peut contenir tous les éléments d’une classe normale, il est utilisé principalement pour l'heritage 
+et forcer le devellopeur a implementer ces abstracts méthodes dans les classes fils.
+
+
+2)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPoop
+{
+    abstract class Forme
+    {
+//a)
+        protected string couleur;
+        protected bool remplie;
+
+
+//b)
+        public string GetCouleur()
+        {
+            return this.couleur;
+        }
+        public void SetCouleur(string couleur)
+        {
+            this.couleur = couleur;
+        }
+        public bool GetRemplie()
+        {
+            return this.remplie;
+        }
+        public void SetRemplie(bool remplie)
+        {
+            this.remplie = remplie;
+        }
+        public override string ToString()
+        {
+            return ""+this.couleur+","+this.remplie;
+        }
+
+//c)
+        public abstract int getSurface();
+        public abstract int getPerimetre();
+
+    }
+}
+
+//d + e)
+
+//class cercle + methode ToString:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPoop
+{
+    public class Cercle : Forme
+    {
+        private int rayon;
+
+        public override double getSurface()
+        {
+            return this.rayon * this.rayon * Math.PI;
+        }
+        public override double getPerimetre()
+        {
+            return 2 * Math.PI * this.rayon;
+        }
+        public override string ToString()
+        {
+            return "" + base.couleur + "," + base.remplie + "," + this.rayon + ",";
+        }
+
+    }
+}
+
+//class rectangle + methode ToString :
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPoop
+{
+    public class Rectangle : Forme
+    {
+        private int longeur;
+        private int largeur;
+
+        public override double getSurface()
+        {
+            return this.longeur * this.largeur;
+        }
+        public override double getPerimetre()
+        {
+            return (this.longeur + this.largeur) * 2;
+        }
+
+        public override string ToString()
+        {
+            return "" + base.couleur + "," + base.remplie + "," + this.longeur + "," + this.largeur + ",";
+        }
+
+    }
+}
+
+//3)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPoop
+{
+    public class TestForme
+    {
+        //Forme f1 = new Forme();   //impossible de créer une instance de type abstract, donc elle va engadré une eurreur.
+        Rectangle r = new Rectangle();  // c'est bon et évident, c'est la methode traditionelle.
+        Cercle c = new Cercle();
+
+        Forme f2 = new Rectangle();  //le polymorphisme repose par la déclaration des objets comme étant des objets de la classe de base.
+    }
+}
+
 
